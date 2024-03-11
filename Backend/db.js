@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const mongoUri = 'mongodb+srv://viniketkahar:Viniket40354@cluster0.n91h8d0.mongodb.net/Todo?retryWrites=true&w=majority'
+const mongoUri = process.env.MONGO_LINK 
 
 const mongoDB = async () => {
     mongoose.connect(mongoUri, { useNewUrlParser: true }, async (err, result) => {
